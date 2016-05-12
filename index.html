@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <title>Geoff's Madlib</title>
+  </head>
+  <body>
+    <div id="app">
+		</div>
+
+    <div class="buttons">
+      <button id="btn1">Random</button>
+      <button id="btn2">Save</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <script>
+var startups = ['Uber', 'Google', 'Amazon', 'Apple', 'Facebook', 'Twitter', 'Slack', 'Trello', 'Tesla', 'Hyperloop', 'Harvest'];
+var groups = ['farmers', 'astronauts', 'children', 'programmers', 'students', 'dogs', 'teachers'];
+
+var random1 = Math.floor((Math.random() * startups.length));
+var random2 = Math.floor((Math.random() * groups.length));
+
+console.log('A startup that is ' + startups[random1] + ', but for ' + groups[random2]);
+    </script>
+
+    <script id="practice" type="text/x-handlebars-template">
+        <div class='startup'>
+    			<p>A startup that is <strong>{{startups}}</strong> but for <strong>{{groups}}.<strong/> </p>
+          </div>
+    		</script>
+
+    		<script>
+    			var templateSource = $('#practice').html()
+    			var compiledTemplate = Handlebars.compile(templateSource)
+    			var data = {
+    				startups: startups[random1],
+            groups: groups[random2]
+    			}
+    			var generatedHtml = compiledTemplate(data)
+    			$('#app').html(generatedHtml)
+    		</script>
+
+        <script type="text/javascript">
+        $('#btn2').click(function(){
+          $("p").append("<b>Appended text</b>.");
+            });
+        </script>
+
+  </body>
+</html>
