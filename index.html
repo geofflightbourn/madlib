@@ -9,6 +9,9 @@
   </head>
   <body>
     <div id="app">
+      <p>
+
+      </p>
 		</div>
 
     <div class="buttons">
@@ -49,8 +52,14 @@ console.log('A startup that is ' + startups[random1] + ', but for ' + groups[ran
 
         <script type="text/javascript">
         $('#btn2').click(function(){
-          $("p").append("<b>Appended text</b>.");
-            });
+          $("#app").clone().appendTo("ul")
+            })
+        </script>
+
+        <script type="text/javascript">
+          $('#btn1').click(function() {
+            $("#app").load("#app");
+          })
         </script>
 
   </body>
