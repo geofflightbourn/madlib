@@ -1,9 +1,27 @@
-html{
+.container {
   margin: auto;
   text-align: center;
 }
 
 .startup {
-  padding-top: 20px;
-  font-size: 20px;
+  font-size: 30px;
+  border-style: solid;
+  border-width: 3px;
+}
+
+.buttons{
+  padding: 10px;
+}
+
+#btn1, #btn2{
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    font-size: 20px;
+}
+
+.saved{
+  width: auto;
+  background-color: grey;
+  color: white;
 }

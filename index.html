@@ -8,20 +8,26 @@
     <title>Geoff's Madlib</title>
   </head>
   <body>
-    <div id="app">
-      <p>
+    <div class="container">
 
-      </p>
-		</div>
+      <div id="app">
 
-    <div class="buttons">
-      <button id="btn1">Random</button>
-      <button id="btn2">Save</button>
+      </div>
+
+      <div class="buttons">
+        <button id="btn1">Random</button>
+        <button id="btn2">Save</button>
+      </div>
+
+<div class="saved">
+  <span>
+
+  </span>
+</div>
+
     </div>
 
-    <ul>
 
-    </ul>
 
     <script>
 var startups = ['Uber', 'Google', 'Amazon', 'Apple', 'Facebook', 'Twitter', 'Slack', 'Trello', 'Tesla', 'Hyperloop', 'Harvest'];
@@ -52,7 +58,7 @@ console.log('A startup that is ' + startups[random1] + ', but for ' + groups[ran
 
         <script type="text/javascript">
         $('#btn2').click(function(){
-          $("#app").clone().appendTo("ul")
+          $("#app").clone().appendTo("span")
             })
         </script>
 
